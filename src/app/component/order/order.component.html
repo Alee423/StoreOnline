@@ -1,0 +1,56 @@
+<div class="header">
+    <h1>ONLINE STORE</h1>
+   </div>
+
+   <div *ngIf="alertVisible" class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Success!</strong> Payment successfully.
+    <button type="button" class="btn" (click)="alertVisible = false" aria-label="Close"></button>
+  </div>
+
+
+<div class="Box">
+<div class="cart">
+    <div class="cart-product" *ngFor="let product of  cartItems">
+      <img [src]="product.imageUrl" alt="{{product.name}}" class="cart-product-image">
+      <h2 class="cart-product-title">{{product.name}}</h2>
+      <p class="cart-product-price">Price: $.{{product.price}}</p>
+    </div>
+  </div>
+
+  <div class="Border">
+    <h2>Total Sum: $.{{ totalSum | number:'1.2-2' }}</h2>
+  </div>
+</div>
+
+
+
+<div>
+  <label style="display: none;" for="amount">Amount:</label>
+  <input style="display: none;" type="text" id="amount" [(ngModel)]="payment.amount" readonly />
+
+  <label style="display: none;" for="currency">Currency:</label>
+  <input style="display: none;" type="text" id="currency" [(ngModel)]="payment.currency" readonly />
+
+  <label style="display: none;" for="customerId">Customer ID:</label>
+  <input style="display: none;" type="text" id="customerId" [(ngModel)]="payment.customerId" readonly />
+
+  
+
+  <button class="button1" (click)="addStripePayment()" style="margin-left: 85%;">Make Payment</button>
+  <!-- <button (click)="generateInvoiceReport()" style="margin-left: 15px;">OPEN</button> -->
+  
+</div>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+

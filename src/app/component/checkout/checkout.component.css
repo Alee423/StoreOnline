@@ -1,0 +1,104 @@
+
+/* Styles for the form container */
+form {
+    max-width: 400px; /* Set maximum width for the form */
+    margin: 20px auto; /* Center the form horizontally */
+    padding: 20px; /* Add padding inside the form */
+    border: 1px solid #ccc; /* Add a border around the form */
+    border-radius: 5px; /* Add rounded corners to the form */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  }
+  
+  /* Styles for labels */
+  label {
+    display: block; /* Make labels block-level for better spacing */
+    margin-bottom: 8px; /* Add space below each label */
+  }
+  
+  /* Styles for input fields */
+  input {
+    width: 100%; /* Make input fields take 100% of the width */
+    padding: 8px; /* Add padding inside the input fields */
+    margin-bottom: 16px; /* Add space below each input field */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+    border: 1px solid #ccc; /* Add a border around the input fields */
+    border-radius: 4px; /* Add rounded corners to the input fields */
+  }
+  
+  /* Styles for the submit button */
+  button {
+    background-color:#3498db; /* Set background color for the button */
+    color: white; /* Set text color for the button */
+    padding: 10px 15px; /* Add padding inside the button */
+    border: none; /* Remove the button border */
+    border-radius: 4px; /* Add rounded corners to the button */
+    cursor: pointer; /* Change cursor to a pointer on hover */
+    
+  }
+  
+  /* Styles for hover effect on the submit button */
+  button:hover {
+    background-color: #2980b9; /* Darken the background color on hover */
+  }
+  
+
+
+  
+
+
+
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* To evenly distribute cards horizontally */
+  }
+  
+  .col-md-4 {
+    flex: 0 0 calc(33.3333% - 20px); /* Adjust the width as needed */
+    margin-bottom: 20px; /* Add margin for spacing between rows */
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #ddd; /* Add a border for visualization */
+  }
+  
+  .card img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card-title {
+    font-weight: bold;
+  }
+  
+  .card-text {
+    flex: 1; /* Allow the description to take available space */
+  }
+  
+  .header {
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: relative; /* Ensure relative positioning for children */
+    }
+    
+    .header h1 {
+      font-size: 36px;
+      margin: 0;
+    }  
+ 
+
+
+

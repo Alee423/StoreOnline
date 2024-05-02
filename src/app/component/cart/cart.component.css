@@ -1,0 +1,104 @@
+.cart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribute items evenly */
+  }
+  
+  .cart-product {
+    flex: 0 0 calc(33.3333% - 20px); /* Equal width for all items, adjust width as needed */
+    background-color: #f0f0f0; /* Background color for items */
+    padding: 20px; /* Add padding for spacing between items */
+    margin: 10px; /* Add margin for spacing around items */
+    border: 1px solid #ddd; /* Add a border for visualization */
+  }
+  
+  .cart-product-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .cart-product-title {
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .cart-product-price {
+    margin: 0;
+  }
+ .Border {
+    display: flex; /* Use flex container */
+    justify-content: space-between; /* Align items with space between them */
+    border: 1px solid #ccc; /* Border for the container */
+    padding: 20px; /* Padding for the container */
+    margin-top: 20px; /* Top margin to separate from the button */
+  }
+
+  .checkout{
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underlining of the anchor text */
+    cursor: pointer; /* Change cursor to a pointer on hover */
+  }
+
+  .butttn{
+    display: flex;      /* Use flex container */
+    justify-content: space-between; /* Align items with space between them */
+  }
+
+
+
+
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* To evenly distribute cards horizontally */
+  }
+  
+  .col-md-4 {
+    flex: 0 0 calc(33.3333% - 20px); /* Adjust the width as needed */
+    margin-bottom: 20px; /* Add margin for spacing between rows */
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #ddd; /* Add a border for visualization */
+  }
+  
+  .card img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card-title {
+    font-weight: bold;
+  }
+  
+  .card-text {
+    flex: 1; /* Allow the description to take available space */
+  }
+  
+  .header {
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: relative; /* Ensure relative positioning for children */
+    }
+    
+    .header h1 {
+      font-size: 36px;
+      margin: 0;
+    }

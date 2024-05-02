@@ -1,0 +1,27 @@
+
+<div class="header">
+    <h1>ONLINE STORE</h1>
+   </div>
+  
+  
+  
+  
+  <div class="cart">
+      <div class="cart-product" *ngFor="let product of  cartItems">
+        <img [src]="product.imageUrl" alt="{{product.name}}" class="cart-product-image">
+        <h2 class="cart-product-title">{{product.name}}</h2>
+        <p class="cart-product-price">Price: $.{{product.price}}</p>
+      </div>
+    </div>
+  
+    <div class="Border">
+      <h2>Total Sum: $.{{ totalSum | number:'1.2-2' }}</h2>
+    </div>
+  
+  <div class="butttn">
+     <button class="checkout">
+      <a [routerLink]="['/checkout']" style="color: white; text-decoration: none;">PROCEED TO CHECKOUT</a>
+    </button>
+  
+  </div>
+    

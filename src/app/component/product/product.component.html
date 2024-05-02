@@ -1,0 +1,121 @@
+<div class="header">
+
+  <div class="search-container">
+    <input type="text" placeholder="Search Products" [(ngModel)]="searchTerm" />
+    <button class="btn btn-primary" (click)="searchProducts()">Search</button>
+  </div>
+  <h1>ONLINE STORE</h1>
+  
+    <button  class="view-cart-button" class="btn btn-primary">
+      <a [routerLink]="['/cart']" style="color: white;">
+        <i class="fa badge" [style.font-size.px]="24" [attr.value]="badgeValue">&#xf07a;</i>
+      </a>
+    </button>
+
+</div>
+
+
+
+<div *ngIf="alertVisible" class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Success!</strong> Item successfully added to cart.
+  <button type="button" class="btn" (click)="alertVisible = false" aria-label="Close"></button>
+</div>
+
+<!-- Display search results -->
+<div *ngIf="searchResults.length > 0">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let product of searchResults">
+      <div class="card">
+        <img [src]="product.imageUrl" [alt]="product.name" class="card-img-top">
+        <div class="card-body">
+          <h1 class="card-title">{{ product.name }}</h1>
+          <p class="card-text">{{ product.description }}</p>
+          <p class="card-text">Price: ${{ product.price }}</p>
+          <button class="btn btn-primary" (click)="addToCart(product)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Display all products if no search term or no results -->
+<div *ngIf="searchResults.length === 0 && products.length > 0">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let product of products">
+      <div class="card">
+        <img [src]="product.imageUrl" [alt]="product.name" class="card-img-top">
+        <div class="card-body">
+          <h1 class="card-title">{{ product.name }}</h1>
+          <p class="card-text">{{ product.description }}</p>
+          <p class="card-text">Price: ${{ product.price }}</p>
+          <button class="btn btn-primary" (click)="addToCart(product)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+<!-- <div>
+  <canvas id="canvas"></canvas>
+</div>
+
+
+
+<button (click)="fetchDataAndRenderChart()" style="margin-left: 15px;">OPEN</button> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div class="header">
+    <h1>ONLINE STORE</h1>
+    <div class="view-cart-button">
+      <button class="btn btn-primary">
+        <a [routerLink]="['/cart']" style="color: white;"><i class="fa badge" [style.font-size.px]="24" [attr.value]="badgeValue">&#xf07a;</i></a>
+      </button>
+    </div>  
+  </div>
+
+  <div>
+    <input type="text" placeholder="Search Products" [(ngModel)]="searchTerm" />
+    <button class="btn btn-primary" (click)="searchProducts()">Search</button>
+  </div>
+
+
+  <div *ngIf="alertVisible"  class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Success!</strong> Item successfully added to cart.
+    <button type="button" class="btn" (click)="alertVisible = false" aria-label="Close"></button>
+  </div>
+  
+   
+  <div class="row">
+    <div class="col-md-4"  *ngFor="let product of products">
+      <div class="card">
+        <img [src]="product.imageUrl" [alt]="product.name" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">{{ product.description }}</p>
+          <p class="card-text">Price: $:{{ product.price }}</p>
+          <button class="btn btn-primary" (click)="addToCart(product)">Add to Cart</button> -->
+          <!-- <button class="btn btn-primary"  (click)="Addtostripe(product)">Add to Stripe</button> -->
+        <!-- </div>
+      </div>
+    </div>  
+  </div> -->
+  
